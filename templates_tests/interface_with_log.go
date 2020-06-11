@@ -1,10 +1,10 @@
 package templatestests
 
 // DO NOT EDIT!
-// This code is generated with http://github.com/hexdigest/gowrap tool
+// This code is generated with http://github.com/gabstv/gowrap tool
 // using ../templates/log template
 
-//go:generate gowrap gen -p github.com/hexdigest/gowrap/templates_tests -i TestInterface -t ../templates/log -o interface_with_log.go -v DecoratorName=TestInterfaceWithLogger
+//go:generate gowrap gen -p github.com/gabstv/gowrap/templates_tests -i TestInterface -t ../templates/log -o interface_with_log.go -v DecoratorName=TestInterfaceWithLogger
 
 import (
 	"context"

@@ -11,8 +11,8 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/hexdigest/gowrap/generator"
-	"github.com/hexdigest/gowrap/pkg"
+	"github.com/gabstv/gowrap/generator"
+	"github.com/gabstv/gowrap/pkg"
 	"github.com/pkg/errors"
 )
 
@@ -47,7 +47,7 @@ func NewGenerateCommand(l remoteTemplateLoader) *GenerateCommand {
 	fs := &flag.FlagSet{}
 	fs.BoolVar(&gc.noGenerate, "g", false, "don't put //go:generate instruction to the generated code")
 	fs.StringVar(&gc.interfaceName, "i", "", `the source interface name, i.e. "Reader"`)
-	fs.StringVar(&gc.sourcePkg, "p", "", "the source package import path, i.e. \"io\", \"github.com/hexdigest/gowrap\" or\na relative import path like \"./generator\"")
+	fs.StringVar(&gc.sourcePkg, "p", "", "the source package import path, i.e. \"io\", \"github.com/gabstv/gowrap\" or\na relative import path like \"./generator\"")
 	fs.StringVar(&gc.outputFile, "o", "", "the output file name")
 	fs.StringVar(&gc.template, "t", "", "the template to use, it can be an HTTPS URL, local file or a\nreference to a template in gowrap repository,\n"+
 		"run `gowrap template list` for details")
@@ -262,7 +262,7 @@ var helperFuncs = template.FuncMap{
 const headerTemplate = `package {{.Package.Name}}
 
 // DO NOT EDIT!
-// This code is generated with http://github.com/hexdigest/gowrap tool
+// This code is generated with http://github.com/gabstv/gowrap tool
 // using {{.Options.HeaderVars.Template}} template
 
 {{if (not .Options.HeaderVars.DisableGoGenerate)}}

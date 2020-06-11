@@ -3,10 +3,10 @@ package templatestests
 import "context"
 
 // DO NOT EDIT!
-// This code is generated with http://github.com/hexdigest/gowrap tool
+// This code is generated with http://github.com/gabstv/gowrap tool
 // using ../templates/syncpool template
 
-//go:generate gowrap gen -p github.com/hexdigest/gowrap/templates_tests -i TestInterface -t ../templates/syncpool -o interface_with_syncpool.go
+//go:generate gowrap gen -p github.com/gabstv/gowrap/templates_tests -i TestInterface -t ../templates/syncpool -o interface_with_syncpool.go
 
 // TestInterfacePool implements TestInterface that uses pool of TestInterface
 type TestInterfacePool struct {

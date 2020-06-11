@@ -3,10 +3,10 @@ package templatestests
 import "context"
 
 // DO NOT EDIT!
-// This code is generated with http://github.com/hexdigest/gowrap tool
+// This code is generated with http://github.com/gabstv/gowrap tool
 // using ../templates/validate template
 
-//go:generate gowrap gen -p github.com/hexdigest/gowrap/templates_tests -i InterfaceWithValidtableArg -t ../templates/validate -o interface_with_validation.go
+//go:generate gowrap gen -p github.com/gabstv/gowrap/templates_tests -i InterfaceWithValidtableArg -t ../templates/validate -o interface_with_validation.go
 
 // InterfaceWithValidtableArgWithValidation implements InterfaceWithValidtableArg interface instrumented with arguments validation
 type InterfaceWithValidtableArgWithValidation struct {
